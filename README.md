@@ -10,6 +10,9 @@ These are headers of the input file that we use in the script:
 | SNP_ID | chr | position | Effect_Allele | non-Effect_Allele | eaf | info | beta | se | P_value |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
+eaf = Effect Allele Frequency
+<br>
+<br>
 Here are the steps in the file:
 - if (eaf or info or beta or se or P_value) = NULL or NA, it removes the SNP (means it skips the line)
 - if both beta and se = 0, it removes the SNP (means it skips the line)
@@ -24,6 +27,10 @@ Here are the steps in the file:
 | ID | CHR | POS | A1(Effect_Allele) | A2(non-Effect_Allele) | beta | se | p | info | 0 | eaf | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
+A1 = Effect_Allele)
+A2 = non-Effect_Allele)
+<br>
+<br>
 The script keeps track of the different categories of SNPs in an output file:
 - SNPs which kept, 
 - SNPs with a low value for info (or r2),

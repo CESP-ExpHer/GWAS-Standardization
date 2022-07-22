@@ -39,5 +39,5 @@ from scipy import stats
 import datetime
 ```
 
-**NOTE:** The code is available here [Download](../GCPBayes-Pipeline/tree/main/0_Codes))
+**NOTE:** The code is available here [Download](../GCPBayes-Pipeline/blob/main/0_Codes)
 ## Second Trait

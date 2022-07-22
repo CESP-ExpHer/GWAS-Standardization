@@ -6,6 +6,18 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
 <br>
 <br>
 
+## Contents
+- [First Trait](#first-trait)
+  * [INPUT](#input)
+  * [SCRIPT](#script)
+  * [OUTPUTS](#outputs)
+  * [libraries used in the code](#libraries-used-in-the-code)
+- [Second Trait](#second-trait)
+  * [INPUTS](#inputs)
+  * [SCRIPT](#script-1)
+  * [OUTPUTS](#outputs-1)
+  * [libraries used in the code](#libraries-used-in-the-code-1)
+
 When you work on **GWAS Summary Statistics data** in **more than one trait**, it is important to put alleles in both data in a same position. We called this step as **Standardization**. <br><br>
 
 Here, we provided two Python script in order to clean, order, and standardize your data:

@@ -1,10 +1,19 @@
 # GWAS-Standardization
+Created by: Yazdan Asgari<br>
+Creation date: 22 Jul 2022<br>
+Update: Jul 2022<br>
+https://cesp.inserm.fr/en/equipe/exposome-and-heredity
+<br>
+<br>
+
 When you work on **GWAS Summary Statistics data** in **more than one trait**, it is important to put alleles in both data in a same position. We called this step as **Standardization**. <br><br>
 
 Here, we provided two Python script in order to clean, order, and standardize your data:
 ## First Trait
 **IMPORTANT NOTE:** For the first trait, we assume the data for Breast cancer consortium ([BCAC version 2020](https://bcac.ccge.medschl.cam.ac.uk/bcacdata/oncoarray/oncoarray-and-combined-summary-result/)).<br><br>
 **NOTE:** The code reads the GWAS Summary Statistics data for **BCAC_2020_onco_all** *"icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt"* and writes it in a proper format that could be used for our future analyses. <br><br>
+
+### INPUT
 These are headers of the input file that we use in the script:
 <br>
 | SNP_ID | chr | position | Effect_Allele | non-Effect_Allele | eaf | info | beta | se | P_value |
@@ -13,6 +22,8 @@ These are headers of the input file that we use in the script:
 eaf = Effect Allele Frequency
 <br>
 <br>
+
+### SCRIPT
 Here are the steps in the file:
 - reading the file
 - if (eaf or info or beta or se or P_value) = NULL or NA, it removes the SNP (means it skips the line)
@@ -23,8 +34,10 @@ Here are the steps in the file:
 - if the SNP is in the duplicated set, it removes the SNP (means it skips the line) and prints the SNP in its output file
 - it calculates the MAF (Minor Allele Frequency) based on EAF 
 - it counts the SNPs with a value smaller than 0.9 for info
-- Output file: writing the line in the output file which includes the following headers names
 
+### OUTPUTS
+Output file: writing the line in the output file which includes the following headers names:
+<br>
 | ID | CHR | POS | A1 | A2 | beta | se | p | info | ngt | eaf | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
@@ -60,9 +73,14 @@ import datetime
 
 **IMPORTANT NOTE:** For the second trait, we assume the data for Ovarian cancer consortium ([OCAC version 2020](https://ocac.ccge.medschl.cam.ac.uk/)).
 <br><br>
-**NOTE:** The code reads the GWAS Summary Statistics data for OCAC *"extraction_OCAC.txt"* and writes it in a proper format that could be used for our future analyses. It also checks the *"Effect"* and *"non-Effect"* Alleles to be in accordance with the reference file (here the file created from above section (**First Trait**))
+**NOTE:** The code reads the GWAS Summary Statistics data for OCAC *"extraction_OCAC.txt"* and writes it in a proper format that could be used for our future analyses. It also checks the *"Effect"* and *"non-Effect"* Alleles to be in accordance with the **reference file** (here the file created from above section (**First Trait**))
 <br><br>
-These are headers of the input file that we use in the script:
+
+### INPUTS
+1. The file created from above section (**For the First Trait**)
+2. The file that needs Standardization (**For the Second Trait**)
+<br>
+These are headers of the input file that needs Standardization:
 <br>
 | chr | position | A1 | A2 | EAF | nEAF | beta | se | p-value | info | N |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
@@ -79,6 +97,7 @@ N = Number of samples
 <br>
 <br>
 
+### SCRIPT
 Here are the steps in the file:
 - reading the file
 - if (EAF or nEAF or beta or se or p) = NULL or NA, it removes the SNP (means it skips the line)
@@ -96,7 +115,8 @@ Here are the steps in the file:
   - If the SNP does not fit to any of the above categories, it removes the SNP (means it skips the line)
 - if the SNP does not exist in the reference, it removes the SNP (means it skips the line)
 
-Output file: writing the line in the output file which includes the following headers names
+### OUTPUTS
+Output file: writing the line in the output file which includes the following headers names:
 <br>
 | snp | chr | bp_hg19 | Effect_A | nonEffect_A | beta | se | pval | info | ngt | EAF | nEAF | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |

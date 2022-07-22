@@ -2,15 +2,15 @@
 When you work on **GWAS Summary Statistics data** in **more than one trait**, it is important to put alleles in both data in a same position. We called this step as **Standardization**. <br>
 Here, we provided two Python script in order to clean, order, and standardize your data:
 ## First Trait
-The code reads the GWAS Summary Statistics data for **BCAC_2020_onco_all** *"icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt"* and writes it in a proper format that could be used for our future analyses. 
+**NOTE:** The code reads the GWAS Summary Statistics data for **BCAC_2020_onco_all** *"icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt"* and writes it in a proper format that could be used for our future analyses. 
 These are headers of the input file that we use in the script:
 <br>
 | SNP_ID | chr | position | Effect_Allele | non-Effect_Allele | eaf | info | beta | se | P_value |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
 Here are the steps in the file:
-- if (eaf or info or beta or se or P_value) == NULL or NA, it removes the SNP (means it skips the line)
-- if both beta and se == 0, it removes the SNP (means it skips the line)
+- if (eaf or info or beta or se or P_value) = NULL or NA, it removes the SNP (means it skips the line)
+- if both beta and se = 0, it removes the SNP (means it skips the line)
 - if one of the alleles has a length not equal to 1, and the SNP includes alleles that are not composed of ATGC, it will be removed 
 - if the SNP is an ambiguous SNPs, it removes the SNP (means it skips the line) and prints the SNP in its output file
 - if A1 and A2 have more than one nucleotide and have the same length, it checks if they are not ambiguous. If so, it removes the SNP (means it skips the line)
@@ -19,7 +19,7 @@ Here are the steps in the file:
 - it counts the SNPs with a value smaller than 0.9 for info
 - writing the line in the output file which includes the following headers names
 
-| ID | CHR | POS | A1 | A2 | beta | se | p | info | 0 | eaf | MAF |
+| ID | CHR | POS | A1(Effect_Allele) | A2(non-Effect_Allele) | beta | se | p | info | 0 | eaf | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
 The script keeps track of the different categories of SNPs in an output file:
@@ -38,4 +38,6 @@ from collections import defaultdict
 from scipy import stats
 import datetime
 ```
+
+**NOTE:** The code is available here [Download](../GCPBayes-Pipeline/tree/main/0_Codes))
 ## Second Trait

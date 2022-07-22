@@ -27,7 +27,7 @@ Here, we provided two Python script in order to clean, order, and standardize yo
 
 ### INPUT
 These are headers of the input file that we use in the script:
-<br>
+
 | SNP_ID | chr | position | Effect_Allele | non-Effect_Allele | eaf | info | beta | se | P_value |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
@@ -49,7 +49,7 @@ Here are the steps in the file:
 
 ### OUTPUTS
 Output file: writing the line in the output file which includes the following headers names:
-<br>
+
 | ID | CHR | POS | A1 | A2 | beta | se | p | info | ngt | eaf | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
@@ -93,7 +93,7 @@ import datetime
 2. The file that needs Standardization (**For the Second Trait**)
 <br>
 These are headers of the input file that needs Standardization:
-<br>
+
 | chr | position | A1 | A2 | EAF | nEAF | beta | se | p-value | info | N |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
@@ -129,7 +129,7 @@ Here are the steps in the file:
 
 ### OUTPUTS
 Output file: writing the line in the output file which includes the following headers names:
-<br>
+
 | snp | chr | bp_hg19 | Effect_A | nonEffect_A | beta | se | pval | info | ngt | EAF | nEAF | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 

@@ -24,12 +24,12 @@ Here are the steps in the file:
 - it counts the SNPs with a value smaller than 0.9 for info
 - writing the line in the output file which includes the following headers names
 
-| ID | CHR | POS | A1(Effect_Allele) | A2(non-Effect_Allele) | beta | se | p | info | 0 | eaf | MAF |
+| ID | CHR | POS | A1 | A2 | beta | se | p | info | 0 | eaf | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
-A1 = Effect_Allele
+A1 = Effect Allele
 <br>
-A2 = non-Effect_Allele
+A2 = non-Effect Allele
 <br>
 <br>
 The script keeps track of the different categories of SNPs in an output file:

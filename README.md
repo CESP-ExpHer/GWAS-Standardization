@@ -27,8 +27,9 @@ Here are the steps in the file:
 | ID | CHR | POS | A1(Effect_Allele) | A2(non-Effect_Allele) | beta | se | p | info | 0 | eaf | MAF |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 
-A1 = Effect_Allele)
-A2 = non-Effect_Allele)
+A1 = Effect_Allele
+<br>
+A2 = non-Effect_Allele
 <br>
 <br>
 The script keeps track of the different categories of SNPs in an output file:

@@ -39,5 +39,5 @@ from scipy import stats
 import datetime
 ```
 
-**NOTE:** The code is available here ([Download](https://github.com/CESP-ExpHer/GCPBayes-Pipeline/blob/main/0_Codes))
+**NOTE:** The code (*A1_code_reformatting_file_bcac_2020_all.py*) is available here ([Download](https://github.com/CESP-ExpHer/GCPBayes-Pipeline/blob/main/0_Codes))
 ## Second Trait

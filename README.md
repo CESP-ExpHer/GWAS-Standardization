@@ -3,7 +3,7 @@ When you work on **GWAS Summary Statistics data** in **more than one trait**, it
 
 Here, we provided two Python script in order to clean, order, and standardize your data:
 ## First Trait
-**IMPORTANT NOTE:** For the first trait, we assume the data for Breast cancer consortium (BCAC version 2020).<br>
+**IMPORTANT NOTE:** For the first trait, we assume the data for Breast cancer consortium ([BCAC version 2020](https://bcac.ccge.medschl.cam.ac.uk/bcacdata/oncoarray/oncoarray-and-combined-summary-result/)).<br>
 **NOTE:** The code reads the GWAS Summary Statistics data for **BCAC_2020_onco_all** *"icogs_onco_gwas_meta_overall_breast_cancer_summary_level_statistics.txt"* and writes it in a proper format that could be used for our future analyses. 
 These are headers of the input file that we use in the script:
 <br>

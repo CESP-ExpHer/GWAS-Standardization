@@ -162,7 +162,7 @@ import datetime
 **NOTE:** The code (*A2_code_reformatting_file_ocac_bcac_2020_all.py*) is available here ([Download](https://github.com/CESP-ExpHer/GCPBayes-Pipeline/blob/main/0_Codes))
 
 ## Checking The Created Files
-In order to make sure if the scripts worked well and the files are correct (in terms of alleles and values), you could use **"CheckSumStats"**. There is a very detailed tutorial for how to use it in their [GitHub page](https://github.com/MRCIEU/CheckSumStats).
+In order to make sure if the scripts worked well and the files are correct (in terms of alleles and values), you could use **"CheckSumStats"**. There is a tutorial for how to use it in their [GitHub page](https://github.com/MRCIEU/CheckSumStats).
 <br>
 <br>
 **IMPORTANT NOTE:** The "CheckSumStats" mentioned that **extract_snps() function** does NOT work on Windows Operating Systems.

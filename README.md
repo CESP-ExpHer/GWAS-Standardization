@@ -162,5 +162,6 @@ import datetime
 
 ## Checking The Created Files
 In order to make sure if the scripts worked well and the files are correct (in terms of alleles and values), you could use **"CheckSumStats"**. There is a very detailed tutorial for how to use it in their [GitHub page](https://github.com/MRCIEU/CheckSumStats).
-
+<br>
+**IMPORTANT NOTE:** The "CheckSumStats" mentioned that **extract_snps() function** does NOT work on Windows Operating Systems.
 

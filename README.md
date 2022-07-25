@@ -17,6 +17,7 @@ https://cesp.inserm.fr/en/equipe/exposome-and-heredity
   * [SCRIPT](#script-1)
   * [OUTPUTS](#outputs-1)
   * [libraries used in the code](#libraries-used-in-the-code-1)
+- [Checking The Created Files](#checking-the-created-files) 
 
 When you work on **GWAS Summary Statistics data** in **more than one trait**, it is important to put alleles in both data in a same position. We called this step as **Standardization**. <br><br>
 
@@ -162,6 +163,7 @@ import datetime
 
 ## Checking The Created Files
 In order to make sure if the scripts worked well and the files are correct (in terms of alleles and values), you could use **"CheckSumStats"**. There is a very detailed tutorial for how to use it in their [GitHub page](https://github.com/MRCIEU/CheckSumStats).
+<br>
 <br>
 **IMPORTANT NOTE:** The "CheckSumStats" mentioned that **extract_snps() function** does NOT work on Windows Operating Systems.
 
